@@ -1,0 +1,107 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.satisfactionSection {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.textContent {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.scoreDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.percentage {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #FF6B4A;
+}
+
+.label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.impactSection {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.impactContent {
+  max-width: 800px;
+}
+
+.impactTitle {
+  font-size: 2.5rem;
+  color: #2D2B3F;
+  font-weight: bold;
+}
+
+.impactHighlight {
+  font-size: 2.5rem;
+  color: #FF6B4A;
+  font-weight: bold;
+}
+
+.impactStats {
+  margin-top: 2rem;
+}
+
+.impactStats h3 {
+  font-size: 1.4rem;
+  color: #2D2B3F;
+  margin-bottom: 1rem;
+}
+
+.impactStats p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4A4A4A;
+}
+
+.highlight {
+  color: #FF6B4A;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scoreDisplay {
+    margin-top: 2rem;
+  }
+
+  .impactTitle,
+  .impactHighlight {
+    font-size: 2rem;
+  }
+} 

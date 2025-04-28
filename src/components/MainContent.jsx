@@ -1,4 +1,10 @@
 import { useEffect, useState, useRef } from "react";
+import GrowingPains from "./GrowingPains";
+import PRChallenges from "./PRChallenges";
+import PRStrategy from "./PRStrategy";
+import PRToolsAdoption from "./PRToolsAdoption";
+import PRToolsPieChart from "./PRToolsPieChart";
+import PRToolsReasons from "./PRToolsReasons";
 
 const Sidebar = ({ scrollToSection, isMenuOpen, activeSection }) => {
   const menuItems = [
@@ -327,6 +333,21 @@ const MainContent = () => {
                     }}
                   />
                 </div>
+              </div>
+            </section>
+
+            <section className="content-section" id="pain-points">
+              <GrowingPains />
+              <PRChallenges />
+              <PRStrategy />
+            </section>
+
+            <section className="content-section" id="pr-tools">
+              <h2 className="section-title">The Use of PR Tools</h2>
+              <div className="section-content">
+                <PRToolsAdoption />
+                <PRToolsPieChart />
+                <PRToolsReasons />
               </div>
             </section>
           </div>

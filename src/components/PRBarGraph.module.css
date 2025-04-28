@@ -1,0 +1,224 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2D1B4D;
+  text-align: left;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #A78BFA;
+  display: block;
+  font-size: 2.2rem;
+}
+
+.yearSelector {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  background: #F8F9FB;
+  padding: 0.5rem;
+  border-radius: 100px;
+  width: auto;
+  justify-content: center;
+}
+
+.yearButton {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 100px;
+  background: transparent;
+  color: #6B7280;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+.yearButton.active {
+  background: #A78BFA;
+  color: white;
+}
+
+.graphContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-bottom: 180px;
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  min-width: 120px;
+}
+
+.barContainer {
+  width: 120px;
+  height: 400px;
+  background: #F3F4F6;
+  border-radius: 16px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.bar {
+  width: 100%;
+  background: #A78BFA;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bar.animate {
+  height: var(--height);
+}
+
+.value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.label {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  text-align: center;
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Table Styles */
+.tableContainer {
+  margin-top: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tableHeader {
+  background: #A78BFA;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.tableHeader:first-child {
+  text-align: left;
+  padding-left: 24px;
+  width: 100px;
+}
+
+.tableCell {
+  padding: 16px;
+  font-size: 14px;
+  text-align: center;
+  background: #F8F9FB;
+  color: #4B5563;
+}
+
+.tableCell:first-child {
+  text-align: left;
+  padding-left: 24px;
+  background: rgba(167, 139, 250, 0.1);
+  font-weight: 500;
+}
+
+.tableRow:nth-child(even) .tableCell:not(:first-child) {
+  background: #F3F4F6;
+}
+
+.tableTitle {
+  background: #A78BFA;
+  color: white;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .graphContainer {
+    overflow-x: auto;
+    padding-bottom: 220px;
+    gap: 1.5rem;
+  }
+  .barGroup {
+    min-width: 100px;
+  }
+  .barContainer {
+    width: 100px;
+    height: 300px;
+  }
+  .value {
+    font-size: 16px;
+  }
+  .label {
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .graphContainer {
+    gap: 1rem;
+    padding-bottom: 180px;
+  }
+  .barGroup {
+    min-width: 80px;
+  }
+  .barContainer {
+    width: 80px;
+    height: 250px;
+  }
+  .value {
+    font-size: 14px;
+  }
+  .label {
+    width: 120px;
+    font-size: 11px;
+    bottom: -80px;
+  }
+} 
